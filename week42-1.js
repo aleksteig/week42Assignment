@@ -73,10 +73,10 @@ function combineTwoArrays(firstArray, secondArray){
         }
     }
 
-    return newCombinedArray.sort((a, b) => a - b);
+    return console.log(newCombinedArray.sort((a, b) => a - b));
 }
 
-console.log(combineTwoArrays(arrayOne, arrayTwo));
+combineTwoArrays(arrayOne, arrayTwo);
 
 /* -----------------------------------------------------------------------------
     Task: C
@@ -92,6 +92,8 @@ console.log("Task: C");
 const ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 const message = "ckrr jutk"
 let shift = 6
+
+
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -111,6 +113,19 @@ console.log("Task: D");
 const numbers = [1, 23, 14, 56, 42, 33, 0, 3];
 const target = 36;
 
+function sumNumbersToTarget(numbers, target){
+    let sumOfNumbers;
+    for(i=0; i<numbers.length; i++){
+        for (j = 0; j < numbers.length; j++){
+            sumOfNumbers = numbers[i] + numbers[j];
+            if (sumOfNumbers == target){
+                return console.log([numbers[i], numbers[j]]);
+            }
+        }
+    }
+}
+
+sumNumbersToTarget(numbers, target);
 
 
 
