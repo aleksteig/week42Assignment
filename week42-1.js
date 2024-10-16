@@ -137,3 +137,14 @@ sumNumbersToTarget(numbers, target);
     42693 -> 5
 */
 console.log("Task: E");
+
+function numberOfDigitsInNumber (number){
+    let digits = 0;
+    let stringNumber = number.toString()
+    for(i=0; i<stringNumber.length; i++){
+        digits += 1;
+    }
+    return console.log(digits);
+}
+
+numberOfDigitsInNumber(0);
