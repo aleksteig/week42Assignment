@@ -93,7 +93,31 @@ const ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 const message = "ckrr jutk"
 let shift = 6
 
+function solveEncryptionByShifts(message, alphabet, shift){
 
+    let decryptedMessage = "";
+    for(i=0; i<message.length; i++){
+        const char = message[i];
+        
+        if (char == " "){
+            decryptedMessage += " ";
+
+        }else{
+            const posInAlphabet = alphabet.indexOf(char);
+            let posInAlphabetAfterShift = (posInAlphabet - shift) % alphabet.length;
+
+            if (posInAlphabetAfterShift < 0){
+                posInAlphabetAfterShift += alphabet.length;
+            }
+
+            decryptedMessage += alphabet[posInAlphabetAfterShift];
+        }
+
+    }
+    return decryptedMessage;
+}
+
+console.log(solveEncryptionByShifts(message, ALPHABET, shift));
 
 /* -----------------------------------------------------------------------------
     Task: D
