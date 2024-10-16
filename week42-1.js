@@ -29,7 +29,15 @@ for (let index = 0; index < people.length; index++) {
 */
 console.log("Task: A");
 
+function arrayFromRangeOfNumbers(startOfArray, endOfArray){
+    let arrayFromNumbers = [];
+    for (i = startOfArray; i < endOfArray; i++){
+        arrayFromNumbers.push(i);
+    }
+    return arrayFromNumbers;
+}
 
+console.log(arrayFromRangeOfNumbers(4, 9));
 
 /* -----------------------------------------------------------------------------
     Task: B
