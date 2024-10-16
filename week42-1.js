@@ -50,7 +50,33 @@ console.log(arrayFromRangeOfNumbers(4, 9));
 */
 console.log("Task: B");
 
+let arrayOne = arrayFromRangeOfNumbers(5, 11);
+let arrayTwo = arrayFromRangeOfNumbers(8, 23);
 
+function combineTwoArrays(firstArray, secondArray){
+    let newCombinedArray = [];
+    for(i = 0; i < firstArray.length; i++){
+        newCombinedArray.push(firstArray[i]);
+    }
+
+    for(i = 0; i < secondArray.length; i++){
+        let isDuplicate = false;
+        for(j = 0; j < newCombinedArray.length; j++){
+            if(secondArray[i] == newCombinedArray[j]){
+                isDuplicate = true;
+                break;
+            }
+
+        }
+        if (!isDuplicate){
+            newCombinedArray.push(secondArray[i]);
+        }
+    }
+
+    return newCombinedArray.sort((a, b) => a - b);
+}
+
+console.log(combineTwoArrays(arrayOne, arrayTwo));
 
 /* -----------------------------------------------------------------------------
     Task: C
